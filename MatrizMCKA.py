@@ -1,10 +1,4 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Aug 12 15:21:37 2018
 
-@author: jespildora
-"""
 import scipy as sp
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
@@ -99,6 +93,10 @@ while i<=18:
     K[i+1,i]=-(5*listak[5])
     i+=1
 
+
+    
+    
+#Parte Benjamín Castro
 #Matriz de masa expresada en toneladas (ton)
 i = 0
 mass = sp.zeros((20,20))
@@ -112,8 +110,6 @@ for piso in mass:
         mass[i,i]=6.2*3.5*4
     i+=1
 
-
-
 f1 = 0.2 #frecuencia en hz
 f2 = 2 #frecuencia en hz
 chi1 = 0.025 #Coeficiente Rayleigh 2,5%
@@ -123,6 +119,10 @@ a1 = (f1*chi1-f2*chi2)/(math.pi*(f1**2-f2**2))
 
 #Matriz de Coeficientes expresado en Ggr/s , 'Giga gramos por segundo'
 C = a0*mass + a1*K
+######################################
+
+
+
 identidad=np.identity(20) #Esquina superior izquierda de la matriz, Matriz identidad, 20x20
 zeros=np.zeros((20,20)) #ESquina superior derecha de la matriz , MAtriz de ceros 20x20
 invmass=inv(mass)#Se invierte la matriz de masas para los calculos siguientes
