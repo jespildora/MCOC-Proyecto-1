@@ -96,7 +96,7 @@ while i<=18:
 
     
     
-#Parte Benjamín Castro
+#Parte Benjamin Castro
 #Matriz de masa expresada en toneladas (ton)
 i = 0
 mass = sp.zeros((20,20))
