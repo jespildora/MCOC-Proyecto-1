@@ -1,0 +1,14 @@
+import scipy as sp
+from scipy import interpolate
+import matplotlib.pyplot as plt
+
+datos = open("20161009-010221-C18O-HNE.txt")
+l1 = datos.readline()
+l2= datos.readline()
+l3= datos.readline()
+l4= datos.readline()
+l5= datos.readline()
+l6= datos.readline()
+dic = {}
+
+print l1 , l2 , l3 , l4 , l5 , l6
