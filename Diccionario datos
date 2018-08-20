@@ -9,6 +9,9 @@ l3= datos.readline()
 l4= datos.readline()
 l5= datos.readline()
 l6= datos.readline()
-dic = {}
-
-print l1 , l2 , l3 , l4 , l5 , l6
+metadatos = {}
+metadatos['fecha']=l1[20:30]
+metadatos['hora']=l1[31:40]
+metadatos['Lat']=l5[10:18]
+metadatos['Long']=l5[30:36]
+metadatos['Estacion nombre']=l4[11:16]
