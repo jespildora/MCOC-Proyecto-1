@@ -54,7 +54,7 @@ for name in files:
     Ia_95 = Ia[i_95]
  
     D_5_95 = t_95 - t_05
- 
+    print name
     print "t_95 = ", t_95
     print "Ia_95 = ", Ia_95
     print "D_5_95 = ", D_5_95
