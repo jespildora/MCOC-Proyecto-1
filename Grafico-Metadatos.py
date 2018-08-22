@@ -122,12 +122,6 @@ for name in files:
         plt.subplot(3,1,1)
         plt.title('Fecha:  ' + metadatos['fecha'] + '  Hora:  ' + metadatos['hora'] + '  Estacion:  ' + metadatos['Estacion nombre'] + "    $D_{{5-95}} = {0:5.2f}$s".format(D_5_95))
          
-        plt.tight_layout()
-        f = open('Metadatos.txt','w+')
-        for k, v in metadatos.items():
-            f.write(str(k) + ' >>> '+ str(v) + '\n\n')
-
-        f.close()
         
 
 plt.show()
