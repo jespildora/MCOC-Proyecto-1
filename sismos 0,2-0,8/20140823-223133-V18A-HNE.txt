@@ -4,6 +4,12 @@
 # Estacion: V18A Componente: HNE
 # Latitud: -33.052 Longitud: -71.338
 # Unidades: m/seg/seg
+# Estacion_Lat:-32.74
+# Estacion_Lon:-71.15
+#Componente:HNE
+#Profundidad:40 
+# M: 6.4
+# Estacion_Nombre:V18A 
  1.732283156485881e-05
  0.0001551607550456524
  2.4327668732088137e-05

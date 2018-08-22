@@ -4,6 +4,12 @@
 # Estacion: VA01 Componente: HNE
 # Latitud: -33.023 Longitud: -71.637
 # Unidades: m/seg/seg
+# Estacion_Lat:-32.74
+# Estacion_Lon:-71.15
+#Componente:HNE
+#Profundidad:40 
+# M: 6.4
+# Estacion_Nombre:VA01 
  0.0
  2.9894453509241196e-08
  4.82265974609345e-10

@@ -4,6 +4,12 @@
 # Estacion: T07A Componente: HNN
 # Latitud: -20.256 Longitud: -69.786
 # Unidades: m/seg/seg
+# Estacion_Lat:-20.62
+# Estacion_Lon:-70.64
+#Componente:HNN
+#Profundidad:30 
+# M: 4.7
+# Estacion_Nombre:T07A 
  0.002434687166473229
  0.002376349976903707
  0.0015456333579345997

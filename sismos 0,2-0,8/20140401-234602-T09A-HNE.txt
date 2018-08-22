@@ -4,6 +4,12 @@
 # Estacion: T09A Componente: HNE
 # Latitud: -19.596 Longitud: -70.211
 # Unidades: m/seg/seg
+# Estacion_Lat:-19.57
+# Estacion_Lon:-70.91
+#Componente:HNE
+#Profundidad:38 
+# M: 8.2
+# Estacion_Nombre:T09A
 -5.251526920449501e-06
 -0.0001598145360216796
  2.0485028096275948e-05

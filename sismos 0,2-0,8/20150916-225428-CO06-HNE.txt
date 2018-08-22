@@ -4,6 +4,12 @@
 # Estacion: CO06 Componente: HNE
 # Latitud: -30.674 Longitud: -71.635
 # Unidades: m/seg/seg
+# Estacion_Lat:-31.55
+# Estacion_Lon:-71.86
+#Componente:HNE
+#Profundidad:40 
+# M: 8.4
+# Estacion_Nombre:CO06
  0.0
  4.753919573420508e-09
 -5.686253273524074e-10

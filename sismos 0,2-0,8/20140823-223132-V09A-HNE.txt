@@ -4,6 +4,12 @@
 # Estacion: V09A Componente: HNE
 # Latitud: -33.048 Longitud: -71.604
 # Unidades: m/seg/seg
+# Estacion_Lat:-32.74
+# Estacion_Lon:-71.15
+#Componente:HNE
+#Profundidad:40 
+# M: 6.4
+# Estacion_Nombre:V09A 
  0.00022192825373290592
  0.0004514153225634032
  0.0008612130077426949

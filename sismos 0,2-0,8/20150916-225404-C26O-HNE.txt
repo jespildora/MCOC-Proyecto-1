@@ -4,8 +4,12 @@
 # Estacion: C26O Componente: HNE
 # Latitud: -30.259 Longitud: -71.490
 # Unidades: m/seg/seg
-# Latitud_Epi: -31.55 Longitud_Epi: -71.86
-# Profundidad: 11 Magnitud: 8.4
+# Estacion_Lat:-31.55
+# Estacion_Lon:-71.86
+#Componente:HNE
+#Profundidad:40 
+# M: 8.4
+# Estacion_Nombre:C26O 
  0.0005059697573137848
 -4.9003450526039806e-05
 -0.00029721444094129527

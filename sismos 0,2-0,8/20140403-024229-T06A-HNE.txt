@@ -4,6 +4,12 @@
 # Estacion: T06A Componente: HNE
 # Latitud: -20.214 Longitud: -70.138
 # Unidades: m/seg/seg
+# Estacion_Lat:-20.35
+# Estacion_Lon:-70.54
+#Componente:HNE
+#Profundidad:26 
+# M: 4.5
+# Estacion_Nombre:T06A 
 -0.0007312049653227515
 -0.000630513020602394
 -0.00046893697166033865

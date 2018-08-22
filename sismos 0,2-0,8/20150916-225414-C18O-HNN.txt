@@ -4,8 +4,12 @@
 # Estacion: C18O Componente: HNN
 # Latitud: -30.278 Longitud: -70.669
 # Unidades: m/seg/seg
-# Latitud_Epi: -31.55 Longitud_Epi: -71.86
-# Profundidad: 11 Magnitud: 8.4
+# Estacion_Lat:-31.55
+# Estacion_Lon:-71.86
+#Componente:HNN
+#Profundidad:40 
+# M: 8.4
+# Estacion_Nombre:C18O
 -0.00014534044178865502
 -4.9662687864215904e-05
  7.401673721674218e-05

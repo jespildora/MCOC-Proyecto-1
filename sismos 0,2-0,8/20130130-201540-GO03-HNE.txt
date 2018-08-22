@@ -4,6 +4,12 @@
 # Estacion: GO03 Componente: HNE
 # Latitud: -27.594 Longitud: -70.235
 # Unidades: m/seg/seg
+# Estacion_Lat:-28.18
+# Estacion_Lon:-70.88
+#Componente:HE
+#Profundidad:52 km
+# M: 6.7
+# Estacion_Nombre: Go03
  0.0
  4.63582705526308e-08
  1.2605003783393507e-10

@@ -4,6 +4,12 @@
 # Estacion: T08A Componente: HNE
 # Latitud: -20.270 Longitud: -70.094
 # Unidades: m/seg/seg
+# Estacion_Lat:-20.36
+# Estacion_Lon:-70.03
+#Componente:HNE
+#Profundidad:42 
+# M: 4.4
+# Estacion_Nombre:T08A 
 -0.0005617327306563814
 -0.000472747627870352
 -0.00043293814772489905

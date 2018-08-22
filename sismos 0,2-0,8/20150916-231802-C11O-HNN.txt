@@ -4,6 +4,12 @@
 # Estacion: C11O Componente: HNN
 # Latitud: -30.696 Longitud: -70.959
 # Unidades: m/seg/seg
+# Estacion_Lat:-31.55
+# Estacion_Lon:-71.86
+#Componente:HNN
+#Profundidad:40 
+# M: 8.4
+# Estacion_Nombre:C11O
 -0.001210788898936499
 -0.0011874546717229456
 -0.0014488041012669511

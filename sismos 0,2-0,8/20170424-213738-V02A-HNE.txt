@@ -4,6 +4,12 @@
 # Estacion: V02A Componente: HNE
 # Latitud: -33.023 Longitud: -71.518
 # Unidades: m/seg/seg
+# Estacion_Lat:-33.09
+# Estacion_Lon:-72.09
+#Componente:HNE
+#Profundidad:24 
+# M: 6.9
+# Estacion_Nombre:V02A
 -0.00015001140989479023
 -0.00014064060376750565
  0.00016144224188707756

@@ -4,6 +4,12 @@
 # Estacion: V18A Componente: HNN
 # Latitud: -33.052 Longitud: -71.338
 # Unidades: m/seg/seg
+# Estacion_Lat:-32.74
+# Estacion_Lon:-71.15
+#Componente:HNN
+#Profundidad:40 
+# M: 6.4
+# Estacion_Nombre:V18A 
 -4.3492734149414014e-05
 -2.0105913094703443e-05
  4.069710055157327e-05
