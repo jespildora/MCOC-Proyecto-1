@@ -81,9 +81,6 @@ for name in files:
         metadatos['PGD']=PGD*100
         metadatos['Duracion']=D_5_95
         
-        print "t_95 = ", t_95
-        print "Ia_95 = ", Ia_95
-        print "D_5_95 = ", D_5_95
          
         plt.figure().set_size_inches([9,6])
          

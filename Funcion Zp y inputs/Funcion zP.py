@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 from numpy.linalg import inv
 from scipy import interpolate
+
+
 datos=sp.load('mck.npz')
 C=datos['C']
 M=datos['M']
@@ -19,22 +21,23 @@ invM=inv(M)
 Cap=[150,250,500,800] # [KN]   Capacidad maxima friccional del disipador
 CAP=sp.zeros(20)
 CAP[:]=150
-vr = 0.0001     # [m/s] Velocidad de referencia para la aproximacion de la friccion via tanh. 
+vr = 0.01     # [m/s] Velocidad de referencia para la aproximacion de la friccion via tanh. 
 dt = 0.01      # [s]   Paso de integracion a usar
-tmax = 200      # [s]   Tiempo maximo de integracion 
+tmax = 60      # [s]   Tiempo maximo de integracion 
  
 
 #Definimos la funcion del lado derecho de la EDO de primer orden
 #a resolver zp = fun(t,z).  zp es la derivada temporal de z.
-datos = sp.loadtxt("/home/jespildora/Documents/Modelos Computacionales en IOC/20150217_143553_V15A/20150217-143509-V15A-HNE.txt")
+datos = sp.load("registro_02.npz")
+ac=datos['a']
 dt =1./200.
-Nt=datos.size
+Nt=ac.size
 t=sp.arange(0,dt*Nt,dt)
 tmax = t[-1]      # [s]   Tiempo maximo de integracion 
-a = interpolate.interp1d(t, datos)
+a = interpolate.interp1d(t, ac)
 xnew = sp.arange(0, dt*Nt, dt)
 ynew = a(xnew)
-plt.plot(t,datos,xnew,ynew)
+plt.plot(t,ac,xnew,ynew)
 plt.show()
 
 def fun(t,z):
@@ -72,7 +75,7 @@ while (ti < tmax):
     z_euler[:,i] = dt * fun(ti, z_euler[:,i-1]) + z_euler[:,i-1]
     ti += dt
     i += 1
-print 'Itegrando ',i,' iteraciones con Metodo de Euler...'
+print 'Integrando ',i,' iteraciones con Metodo de Euler...'
 print'Integrando ',i,' iteraciones con RK45...'
 fun.tnextreport = 0
 fun.solver = "RK45"
@@ -89,8 +92,8 @@ for z, lab in zip([z_euler, z_RK45], ["Euler", "RK45"]):
     v = z[20,:]
  
     #Extraer desplazamientos y velocidades
-    u = z[0,:-1]
-    v = z[20,:-1]
+    u = z[19,:-1]
+    v = z[39,:-1]
     
     umax= max(abs(u))
     plt.subplot(2,1,1)
@@ -114,3 +117,5 @@ plt.legend()
 plt.suptitle("Solucion por metodo de Euler")
  
 plt.show()
+print 'el desplazamiento maximo es: ',umax
+print 'La velocidad maxima es: ', vmax
