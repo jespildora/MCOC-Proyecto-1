@@ -35,7 +35,7 @@ delta=sp.zeros(20)
 delta[0]=0.04
 while j<=19:
     hi[j]=(2.8+hi[j-1])
-    delta[j]=0.001*hi[j]
+    delta[j]=0.015*hi[j]
     j+=1
 j=0
 
