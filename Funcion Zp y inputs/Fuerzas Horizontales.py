@@ -52,4 +52,4 @@ Fi=sp.zeros(20)
 Fi=cv*vs
 Fdesp=K*delta
 discipadores=sp.zeros(20)
-discipadores=abs(Fi-Fdesp)
+discipadores=abs(Fi-Fdesp)/10
