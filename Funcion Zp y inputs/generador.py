@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import glob
 path = "/home/jespildora/Desktop/MCOC-Proyecto-1/sismos 0,2-0,8/*.txt"
 files = glob.glob(path) 
-
+CAP=[800, 500, 800, 500, 800, 500, 500, 150, 150, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0]
 i=1
 for name in files:
    
@@ -22,7 +22,6 @@ for name in files:
     l11 = a.readline()
     l12 = a.readline()
     a = sp.loadtxt(name)
-
     dt = 1./200.
     Nt = a.size
      
@@ -88,7 +87,7 @@ for name in files:
     metadatos['PGV']=PGV*100
     metadatos['PGD']=PGD*100
     metadatos['Duracion']=D_5_95
-
+    a=a*10.
     if i<=9:
         b="registro_0"+str(i)
         sp.savez(b,a=a,metadatos=metadatos,t=t)

@@ -20,11 +20,11 @@ i3=3413333.3 #cm4 80x80
 i4=5467500.0 #cm4 90x90
 i5=8333333.3 #cm4 100x100
 
-ei1=e*i1/100000 #KN*m2
-ei2=e*i2/100000 #KN*m2
-ei3=e*i3/100000 #KN*m2
-ei4=e*i4/100000 #KN*m2
-ei5=e*i5/100000 #KN*m2
+ei1=e*i1/100 #KN*m2
+ei2=e*i2/100 #KN*m2
+ei3=e*i3/100 #KN*m2
+ei4=e*i4/100 #KN*m2
+ei5=e*i5/100 #KN*m2
 
 l1=4.0 #m Longitud de la columna
 l2=2.8 #m LOngitud de la columna
@@ -123,6 +123,7 @@ a1 = (f1*chi1-f2*chi2)/(math.pi*(f1**2-f2**2))
 
 #Matriz de Coeficientes expresado en Ggr/s , 'Giga gramos por segundo'
 C = a0*mass + a1*K
+C=C*1000000
 identidad=np.identity(20) #Esquina superior izquierda de la matriz, Matriz identidad, 20x20
 zeros=np.zeros((20,20)) #ESquina superior derecha de la matriz , MAtriz de ceros 20x20
 invmass=inv(mass)#Se invierte la matriz de masas para los calculos siguientes

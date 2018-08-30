@@ -18,9 +18,8 @@ M=datos['M']
 K=datos['K']
 A=datos['A']
 invM=inv(M)
-Cap=[150,250,500,800] # [KN]   Capacidad maxima friccional del disipador
 CAP=sp.zeros(20)
-CAP=[0, 0, 0, 0, 0, 500, 500, 0, 150, 150, 0, 0, 0, 0, 0, 500, 800, 800, 800, 800]
+CAP=[800, 500, 800, 500, 800, 500, 500, 150, 150, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0]
 vr = 0.01     # [m/s] Velocidad de referencia para la aproximacion de la friccion via tanh. 
 
 #Definimos la funcion del lado derecho de la EDO de primer orden
@@ -43,7 +42,7 @@ def fun(t,z):
     f=sp.zeros(40)
     while i<20:          
           Fr[i+20]=-(CAP[i])*invM[i,i]*sp.tanh((z[20+i])-z[20+i-1])
-          f[i+20]=-a(t)/9.8
+          f[i+20]=-a(t)/9.81
           i+=1
     return sp.matmul(A,z)+Fr+f
 
@@ -63,7 +62,7 @@ z_euler[:,0] = z0
 z_RK45[:,0] = z0
  
  
-print "Integrando con Euler"
+print 'Integrando con Metodo de Euler...'
 fun.tnextreport = 0
 fun.solver = "Euler"    
 i = 1
@@ -72,13 +71,13 @@ while (ti < tmax):
     z_euler[:,i] = dt * fun(ti, z_euler[:,i-1]) + z_euler[:,i-1]
     ti += dt
     i += 1
-print 'Integrando ',i,' iteraciones con Metodo de Euler...'
-print'Integrando ',i,' iteraciones con RK45...'
+print 'Finalizo la integracion mediante Metodo de Euler'
+print'Integrando con RK45...'
 fun.tnextreport = 0
 fun.solver = "RK45"
 solucion_rk45 = solve_ivp(fun, [0., tmax], z0, method='RK45', t_eval=t, vectorized=False )
 z_RK45[:,1:] = solucion_rk45.y
-
+print 'Finalizo la integracion mediante RK45'
 
 #Graficar solucion en desplazamiento y velocidad para ambos metodos
 plt.figure()
@@ -114,48 +113,10 @@ plt.legend()
 plt.suptitle("Solucion por metodo de Euler")
  
 plt.show()
-
-masa=sp.zeros(20)
-p=0
-while p<=19:
-    masa[p]=M[p,p]
-    p+=1
-
-Mtotal=sp.sum(masa)
-vs=max(ac)*Mtotal
-Htotal=57.2
-T=0.047*57.2**0.9
-k=0.75+0.5*T
-cv=sp.zeros(20)
-j=1
-hi=sp.zeros(20)
-hi[0]=4.0
-delta=sp.zeros(20)
-delta[0]=0.04
-while j<=19:
-    hi[j]=(2.8+hi[j-1])
-    delta[j]=0.005*hi[j]
-    j+=1
-j=0
-
-hik=hi**k
-mihi=sp.dot(masa,hik)
-
-
-j=0
-
-while j<=19:    
-    cv[j]=(masa[j]*hik[j])/(mihi)
-    
-    j+=1
-Fi=sp.zeros(20)
-Fi=cv*vs
-despr=sp.zeros(20)
+#Se quieren determinar los desplazamientos relativos entre cada piso se mostraran en [m]
+despr=sp.zeros(20) 
 despr[0]=z_RK45[0,-1]
 j=1
 while j<=19:
    despr[j]=abs(max(z_RK45[j,:])-max(z_RK45[j-1,:]))
    j+=1
-Fdesp=K*delta
-discipadores=sp.zeros(20)
-discipadores=abs(Fi-Fdesp)
