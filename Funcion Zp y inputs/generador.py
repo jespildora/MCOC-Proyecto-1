@@ -96,4 +96,7 @@ for name in files:
     if i>=10:
         b="registro_"+str(i)
         sp.savez(b,a=a,metadatos=metadatos,t=t)
+    print b
+    print abs(metadatos['PGA'])
     i+=1
+    CAP=[0, 0, 0, 0, 0, 500, 500, 0, 150, 150, 0, 0, 0, 0, 0, 500, 800, 800, 800, 800]
