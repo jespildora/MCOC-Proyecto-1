@@ -13,9 +13,9 @@ from scipy import interpolate
 
 
 datos=sp.load('mck.npz')
-C=datos['C']
-M=datos['M']
-K=datos['K']
+C=datos['C'] 
+M=datos['M'] 
+K=datos['K'] 
 A=datos['A']
 invM=inv(M)
 CAP=sp.zeros(20)

@@ -121,8 +121,8 @@ chi2 = 0.025 #COoficiente de Rayleigh 2,5%
 a0 = 4*math.pi*f1*f2*(f1*chi2-f2*chi1)/(f1**2-f2**2)
 a1 = (f1*chi1-f2*chi2)/(math.pi*(f1**2-f2**2))
 
-#Matriz de Coeficientes expresado en Ggr/s , 'Giga gramos por segundo'
-C = a0*mass + a1*K
+#Matriz de Coeficientes expresado en g/s
+C = a0*mass + a1*K 
 C=C*1000000
 identidad=np.identity(20) #Esquina superior izquierda de la matriz, Matriz identidad, 20x20
 zeros=np.zeros((20,20)) #ESquina superior derecha de la matriz , MAtriz de ceros 20x20
