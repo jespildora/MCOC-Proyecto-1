@@ -19,7 +19,7 @@ K=datos['K']
 A=datos['A']
 invM=inv(M)
 CAP=sp.zeros(20)
-CAP=[800, 500, 800, 500, 800, 500, 500, 150, 150, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0]
+CAP=[800, 500, 800, 500, 800, 500, 500, 250, 150, 0, 0, 0, 0, 0, 0, 0, 150, 0, 0, 0]
 vr = 0.01     # [m/s] Velocidad de referencia para la aproximacion de la friccion via tanh. 
 
 #Definimos la funcion del lado derecho de la EDO de primer orden
