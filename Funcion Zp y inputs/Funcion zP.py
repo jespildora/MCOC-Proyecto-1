@@ -33,8 +33,6 @@ tmax = t[-1]      # [s]   Tiempo maximo de integracion
 a = interpolate.interp1d(t, ac)
 xnew = sp.arange(0, dt*Nt, dt)
 ynew = a(xnew)
-plt.plot(t,ac,xnew,ynew)
-plt.show()
 
 def fun(t,z):
     i=1
@@ -92,25 +90,34 @@ for z, lab in zip([z_euler, z_RK45], ["Euler", "RK45"]):
     v = z[39,:-1]
     
     umax= max(abs(u))
-    plt.subplot(2,1,1)
+    plt.subplot(5,1,1)
     plt.plot(t, u, label=lab)
     plt.ylim([-1.5*umax, 1.5*umax])
     plt.xlim([0, tmax])
-    plt.ylabel("Despazamiento, $u = z_1$ (m)")
+    plt.ylabel("Despazamiento [m]")
+    plt.xlabel("Tiempo, $t$ [s]")
     plt.grid(True)
  
     vmax = max(abs(v))
-    plt.subplot(2,1,2)
+    plt.subplot(5,1,3)
     plt.plot(t, v)
-    plt.ylabel("Velocidad, $\dot{u} = z_2$ (m/s)")
-    plt.xlabel("Tiempo, $t$ (s)")
+    plt.ylabel("Velocidad [m/s]")
+    plt.xlabel("Tiempo, $t$ [s]")
     plt.ylim([-1.5*vmax, 1.5*vmax])
     plt.xlim([0, tmax])
     plt.grid(True)
+    
+    plt.subplot(5,1,5)
+    plt.plot(t,ac,xnew,ynew)
+    plt.ylabel("Aceleracion [% g]")
+    plt.xlabel("Tiempo, $t$ [s]")
+    plt.ylim([-70, 70])
+    plt.xlim([0, tmax])
+    plt.grid(True)
 
-plt.subplot(2,1,1)
+plt.subplot(5,1,1)
 plt.legend()
-plt.suptitle("Solucion por metodo de Euler")
+plt.suptitle("Solucion por metodo de Euler y Runge Kutta de cuarto orden")
  
 plt.show()
 #Se quieren determinar los desplazamientos relativos entre cada piso se mostraran en [m]
